@@ -1,0 +1,47 @@
+.favorite {
+  background-color: var(--wheat);
+  padding: 20px 30px;
+}
+
+.favorite h2 {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--backgroundDark);
+  margin-bottom: 30px;
+}
+
+.favorite-container > div:first-of-type {
+  display: flex;
+  overflow-y: scroll;
+}
+
+.favorite .fav-card {
+  background-color: white;
+  margin: 10px;
+  padding: 15px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  flex: 1;
+}
+.favorite .fav-card img {
+  height: 200px;
+  width: auto;
+  object-fit: contain;
+}
+.favorite .fav-close {
+  background-color: var(--marvelRed);
+  border: none;
+  padding: 0 7px 3px;
+  border-radius: 50%;
+  color: var(--fontColor);
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+}
+.favorite .fav-close:hover {
+  cursor: pointer;
+  background-color: var(--backgroundDark);
+  transition-duration: 0.3s;
+}

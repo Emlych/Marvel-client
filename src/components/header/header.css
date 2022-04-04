@@ -1,0 +1,50 @@
+/* Top Bar */
+.header img {
+  width: 100px;
+  height: auto;
+  padding: 10px 30px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+.header nav {
+  display: flex;
+}
+.header nav ul {
+  display: flex;
+  align-items: center;
+}
+.header nav ul a li,
+.header nav li {
+  list-style-type: none;
+  margin-right: 40px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+.header nav ul a {
+  text-decoration: none;
+}
+.header nav ul li:hover {
+  transition-duration: 0.3s;
+  color: var(--marvelRed);
+  cursor: pointer;
+}
+.header ul .signup {
+  background-color: var(--marvelRed);
+  padding: 5px;
+  border-radius: 5px;
+}
+.header ul .signup:hover {
+  background-color: var(--backgroundDark);
+}
+.header .icon {
+  color: var(--backgroundDark);
+  margin: 0 3px;
+}
+.header ul .disconnect {
+  color: var(--marvelRed);
+}

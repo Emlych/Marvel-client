@@ -1,0 +1,85 @@
+.caroussel {
+  padding-top: 40px;
+  width: 100vw;
+}
+.caroussel .title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.caroussel .number {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.caroussel .number input {
+  text-align: center;
+  padding: 5px 1px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  width: 20px;
+  background-color: rgb(247, 238, 220);
+}
+.caroussel .number input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.caroussel .number input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+
+/* Caroussel display of comics */
+.caroussel .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  overflow-x: scroll;
+}
+.card {
+  margin: 0 20px;
+  border: 1px solid rgb(247, 238, 220);
+  padding: 5px;
+}
+.caroussel .card-img {
+  background-color: rgb(247, 238, 220);
+}
+.caroussel .card img {
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 130px;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.caroussel .card img:hover {
+  transform: rotate(-3deg) skewX(3deg) translate(8px, -10px);
+  box-shadow: -30px 30px 40px rgba(0, 0, 0, 0.5);
+  transition-duration: 0.8s;
+}
+.caroussel .card-title {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+}
+
+/* Handle favorites */
+.caroussel .fav-icon {
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 10px;
+  z-index: 99;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  border: 1px solid red;
+}
+.caroussel .active-icon {
+  color: var(--marvelRed);
+}
+.caroussel .inactive-icon {
+  background-color: var(--backgroundDark);
+  color: var(--fontColor);
+}

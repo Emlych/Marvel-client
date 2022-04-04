@@ -1,0 +1,68 @@
+.characterslist {
+  margin-top: 30px;
+  padding: 30px;
+  background: linear-gradient(white, var(--wheat));
+}
+/* set number of items */
+.characterslist .number {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.characterslist .number input {
+  text-align: center;
+  padding: 5px 1px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  width: 40px;
+  background-color: rgb(247, 238, 220);
+}
+.characterslist .number input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.characterslist .number input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+/* display characters */
+.characterslist .card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.characterslist .card-list-item {
+  width: 160px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.characterslist .card-list-item:hover {
+  cursor: pointer;
+  box-shadow: rgba(218, 66, 112, 0.351) 10px 10px 29px 0px;
+}
+.characterslist .card-list-item img {
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.characterslist .card-list-item img:hover {
+  border-radius: 5px;
+  transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition-duration: 0.4s;
+}
+.characterslist .card-name {
+  color: white;
+  padding: 20px 0;
+  font-size: 20px;
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+.characters > h3,
+.characters > div > h3,
+.characters > p {
+  padding: 20px 40px 15px;
+  font-weight: 700;
+  font-size: 30px;
+}
+.characters > div:first-child {
+  background: linear-gradient(var(--wheat), white);
+}
+.characters > p {
+  padding: 20px 40px 0;
+  font-weight: 600;
+  font-size: 20px;
+}

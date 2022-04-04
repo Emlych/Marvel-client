@@ -1,0 +1,83 @@
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal .modal-inside {
+  position: relative;
+  padding: 30px;
+  margin: 10vh auto;
+  height: 60vh;
+  width: 50%;
+  min-width: 300px;
+  border-radius: 10px;
+  background-color: var(--wheat);
+}
+
+/* MODAL close button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: black;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+}
+.close:hover {
+  cursor: pointer;
+}
+/* header */
+.modal-header {
+  display: flex;
+}
+.modal-header h2 {
+  margin-bottom: 30px;
+  margin-right: 20px;
+  padding-bottom: 8px;
+}
+.modal-header h2:hover {
+  cursor: pointer;
+  color: var(--fontColor);
+}
+.modal-header .active {
+  color: var(--marvelRed);
+}
+/* Form */
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+.modal form label {
+  font-weight: 700;
+}
+.modal form input {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+}
+.modal form input::placeholder {
+  color: lightgray;
+}
+.modal .warning {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: var(--marvelRed);
+}
+.modal form button {
+  background-color: var(--marvelRed);
+  color: var(--fontColor);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+}

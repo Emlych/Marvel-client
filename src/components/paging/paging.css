@@ -1,0 +1,45 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.pagination button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: flex-start;
+  height: 20px;
+  width: 160px;
+}
+.pagination button:hover {
+  cursor: pointer;
+}
+
+.pagination .btn-left {
+  justify-content: flex-start;
+}
+.pagination .btn-right {
+  justify-content: flex-end;
+}
+
+.pagination button .line-left {
+  bottom: 12px;
+  left: 0px;
+  position: absolute;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
+.pagination button .line-right {
+  bottom: 12px;
+  right: 0px;
+  position: absolute;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
+.page .none,
+.none .icon {
+  color: white;
+  width: 160px;
+}

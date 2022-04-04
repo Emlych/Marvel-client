@@ -1,0 +1,80 @@
+.home {
+  /* background-image: url("../../assets/iron-man-hero-landing-xpxbmcu6l2c44u4y.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+/* Top Bar */
+.home .topbar img {
+  width: 150px;
+  height: auto;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+}
+.topbar nav ul {
+  margin-top: 20px;
+  display: flex;
+}
+.topbar nav ul a li {
+  list-style-type: none;
+  margin-right: 40px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  z-index: 99;
+}
+.topbar nav ul a {
+  text-decoration: none;
+}
+.topbar nav ul li:hover {
+  color: var(--marvelRed);
+  cursor: pointer;
+}
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+.dot {
+  background-color: white;
+  border-radius: 20px;
+  width: 12px;
+  height: 12px;
+  margin: 10px 15px;
+}
+
+/* Welcome message */
+.welcome {
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 30%;
+  right: 40%;
+  font-size: 75px;
+  width: 35%;
+  font-weight: 800;
+  word-spacing: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Home description */
+.home-description {
+  color: lightslategray;
+  width: 45%;
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+}
+.home-description:hover {
+  color: white;
+}
