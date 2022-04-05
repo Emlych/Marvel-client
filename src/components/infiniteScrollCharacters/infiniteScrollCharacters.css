@@ -42,6 +42,7 @@
   justify-content: center;
   align-items: center;
   background-color: black;
+  position: relative;
 }
 .characterslist .card-list-item:hover {
   cursor: pointer;
@@ -65,4 +66,17 @@
   padding: 20px 0;
   font-size: 20px;
   text-align: center;
+}
+/* Handle favorite characters */
+.characterslist .card-list .fav-icon {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  background-color: var(--wheat);
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.characterslist .card-list .fav-icon:hover {
+  color: var(--marvelRed);
 }

@@ -81,3 +81,22 @@
   border: none;
   border-radius: 5px;
 }
+
+/* Icons */
+.modal .hero-username {
+  position: relative;
+}
+.modal .hero-username input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.modal .dice-icon {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.modal .dice-icon:hover {
+  cursor: pointer;
+  color: var(--marvelRed);
+  transition-duration: 0.3s;
+}

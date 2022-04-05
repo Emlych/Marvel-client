@@ -1,9 +1,11 @@
 import "./infiniteScrollCharacters.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
-const CharactersList = ({ base_url }) => {
+//import component
+import InfiniteScrollCharacterCard from "./InfiniteScrollCharacterCard";
+
+const CharactersList = ({ base_url, setSignIn }) => {
   const [charactersData, setCharactersData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [limit, setLimit] = useState(10);
@@ -57,14 +59,12 @@ const CharactersList = ({ base_url }) => {
           <div className="card-list">
             {charactersData.map((item) => {
               return (
-                <div className="card-list-item" key={item._id}>
-                  <Link to={`/detail/${item._id}`}>
-                    <img
-                      src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
-                      alt="card of comic"
-                    />
-                    <div className="card-name">{item.name}</div>
-                  </Link>
+                <div key={item._id}>
+                  <InfiniteScrollCharacterCard
+                    item={item}
+                    setSignIn={setSignIn}
+                    base_url={base_url}
+                  />
                 </div>
               );
             })}
