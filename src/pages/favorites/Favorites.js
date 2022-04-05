@@ -9,8 +9,9 @@ import Header from "../../components/header/Header";
 
 const Favorites = ({ token, base_url, setUser }) => {
   const [favComics, setfavComics] = useState([]);
-  //const [favCharacters, setfavCharacters] = useState([]);
-  const [isLoading, setisLoading] = useState(true);
+  const [favCharacters, setfavCharacters] = useState([]);
+  const [comicIsLoading, setComicIsLoading] = useState(true);
+  const [characterIsLoading, setCharacterIsLoading] = useState(true);
 
   //load favorite comics and characters
   useEffect(() => {
@@ -20,8 +21,9 @@ const Favorites = ({ token, base_url, setUser }) => {
           headers: { authorization: `Bearer ${token}` },
         });
         setfavComics(response.data.favComics);
-        // setfavCharacters(response.data.favorites.favCharacters);
-        setisLoading(false);
+        setComicIsLoading(false);
+        setfavCharacters(response.data.favCharacters);
+        setCharacterIsLoading(false);
       } catch (error) {
         console.log(
           "Could not fetch your favorite characters and comics : ",
@@ -58,11 +60,31 @@ const Favorites = ({ token, base_url, setUser }) => {
         <h2>All your favorite Marvel items</h2>
         <div className="favorite-container">
           <h3>Favorite Characters</h3>
+          {characterIsLoading ? (
+            <span>Favorite comics are loading.</span>
+          ) : (
+            <div>
+              {favCharacters.map((item) => {
+                return (
+                  <div key={item._id} className="fav-card">
+                    <button
+                      className="fav-close"
+                      onClick={() => removeFav(item)}
+                    >
+                      &times;
+                    </button>
+                    <img src={item.img_url} alt={item.title} />
+                    <h4>{item.title}</h4>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         <div className="favorite-container">
           <h3>Favorite Comics</h3>
-          {isLoading ? (
+          {comicIsLoading ? (
             <span>Favorite comics are loading.</span>
           ) : (
             <div>

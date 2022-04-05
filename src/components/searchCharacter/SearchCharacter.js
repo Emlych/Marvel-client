@@ -1,19 +1,20 @@
 //visuals
 import "./searchCharacter.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
-const SearchCharacter = ({ base_url }) => {
+//import component
+import SearchCharacterCard from "./SearchCharacterCard";
+
+const SearchCharacter = ({ base_url, setSignIn }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const limit = 10;
   const [search, setSearch] = useState("");
-  const handleSearch = (event) => setSearch(event.target.value);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +41,7 @@ const SearchCharacter = ({ base_url }) => {
           name="searchComic"
           id="searchComic"
           value={search}
-          onChange={handleSearch}
+          onChange={(event) => setSearch(event.target.value)}
           placeholder="Type a character name"
         />
       </form>
@@ -50,20 +51,12 @@ const SearchCharacter = ({ base_url }) => {
         <div className="search-list">
           {data.results.map((item) => {
             return (
-              <div className="search-list-item">
-                <FontAwesomeIcon icon={faHeart} className="fav-icon" />
-
-                <Link to={`/detail/${item._id}`} key={item._id}>
-                  <div className="search-item-background"></div>
-                  <img
-                    src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
-                    alt="card of comic"
-                  />
-                  <div className="search-card">
-                    <div>{item.name}</div>
-                    <div>{item.description}</div>
-                  </div>
-                </Link>
+              <div className="search-list-item" key={item._id}>
+                <SearchCharacterCard
+                  item={item}
+                  setSignIn={setSignIn}
+                  base_url={base_url}
+                />
               </div>
             );
           })}

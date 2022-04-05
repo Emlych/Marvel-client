@@ -62,9 +62,16 @@
 }
 /* Handle favorite icon */
 .search-list .fav-icon {
-  /* position: absolute;
+  position: absolute;
   top: 0;
-  left: 0; */
-  background-color: red;
+  background-color: var(--fontColor);
+  color: var(--wheat);
   z-index: 101;
+  font-size: 25px;
+  padding: 8px;
+  border-radius: 50%;
+}
+.search-list .fav-icon:hover {
+  cursor: pointer;
+  color: var(--marvelRed);
 }

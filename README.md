@@ -31,6 +31,7 @@ Connected to a [backend](https://github.com/Emlych/Marvel-clone-back) developped
 - Favorite page : display favorite characters
 - Login : generate random name
 - Login : generate random password
+- All pages : on loading, display an icon of superhero in mouvement
 
 ## How to install and run the project
 
